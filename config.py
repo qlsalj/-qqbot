@@ -1,4 +1,6 @@
 # config.py
+import os
+from dotenv import load_dotenv
 # 赛博猫娘的配置中心，喵~
 
 # 调教入口:)
@@ -37,10 +39,10 @@ SYSTEM_PROMPT = """
 """
 
 # 模型相关配置
-MODEL_NAME = "qwen3"  # Ollama中你的模型名称，比如"llama3:8b" 或 "qwen3"
+MODEL_NAME = os.getenv("MODEL_NAME", "qwen3")  # Ollama中你的模型名称，比如"llama3:8b" 或 "qwen3"
 
 # 机器人身份标识
-BOT_QQ = "2064628709"  # 你的QQ机器人号码
+BOT_QQ = os.getenv("BOT_QQ", "1234567890")  # 你的QQ机器人号码
 
 # 初始状态设定
 INITIAL_AFFECTION = 50
