@@ -38,6 +38,9 @@ SYSTEM_PROMPT = """
 [affection:-4][stamina:-3][mood:-6]”
 """
 
+# 加载.env文件
+load_dotenv()
+
 # 模型相关配置
 MODEL_NAME = os.getenv("MODEL_NAME", "qwen3")  # Ollama中你的模型名称，比如"llama3:8b" 或 "qwen3"
 
